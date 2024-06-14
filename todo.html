@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <style>
+      .custom-card {
+        width: 20rem;
+        border: 1px solid rgb(13, 83, 127);
+      }
+      .btn-round {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      .big-icon {
+        font-size: 3em; /* Adjust the size as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center mt-5">
+      <h3>TODOS</h3>
+    </div>
+    <main>
+      <div class="container mt-5">
+        <select id="userList" class="form-select" aria-label="Default select example">
+          <option selected>Select an user</option>
+        </select>
+      </div>
+      <div class="container d-flex justify-content-end mt-5">
+        <a href="new_todo.html" id="addTaskButton" type="button" class="btn btn-info text-white"> + Add Task</a>
+      </div>
+      <div class="container mt-5">
+        <div id="todosDetailDiv" class="d-flex flex-wrap justify-content-center gap-3">
+          <!-- <div class="card">
+            <div class="card-body">
+              
+              
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+    <script src="./todo.js"></script>
+  </body>
+</html>
