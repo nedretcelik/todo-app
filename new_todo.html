@@ -15,21 +15,41 @@
     <main>
       <div class="container mt-5">
         <label for="selectUser">User</label>
-        <select name="user" id="selectUser"></select>
+        <select name="user" id="selectUser" class="form-select" aria-label="Default select example">
+          <option value="">Select an user</option>
+        </select>
       </div>
 
       <div class="container mt-5">
         <label for="selectCategory">Category</label>
-        <select name="category" id="selectCategory"></select>
+        <select name="category" id="selectCategory" class="form-select" aria-label="Default select example">
+          <option value="">Select a category</option>
+        </select>
       </div>
 
       <div class="container mt-5">
         <form>
           <label for="prioritySelect">Priority</label>
-          <select name="priority" id="prioritySelect">
-          
+          <select name="priority" id="prioritySelect" class="form-select" aria-label="Default select example">
+            <option value="">Select priority</option>
           </select>
         </form>
+      </div>
+
+      <div class="container mt-5">
+        <div class="input-group">
+          <span class="input-group-text">Description</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="mb-3">
+          <label for="deadline" class="form-label">deadline</label>
+          <input type="date" class="form-control" id="deadline" />
+        </div>
+      </div>
+      <div class="container mt-5">
+        <a href="./todo.html" type="button" class="btn btn-info text-white">Submit</a>
       </div>
 
       <!-- <div class="container mt-5">

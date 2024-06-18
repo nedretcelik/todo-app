@@ -38,10 +38,18 @@ window.onload = function () {
     fetch("http://localhost:8083/api/todos")
       .then((response) => response.json())
       .then((todos) => {
+        let newtodo = [];
+      
         for (const todo of todos) {
+          if(newtodo.indexOf(todo.priority) == -1) {
+            newtodo.push(todo.priority)
+          } 
+        }
+        console.log(newtodo)
+        for (const todo of newtodo) {
           let priorityOption = new Option("option");
 
-          priorityOption.innerText = todo.priority;
+          priorityOption.innerText = todo
 
           prioritySelect.appendChild(priorityOption);
         }

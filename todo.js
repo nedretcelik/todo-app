@@ -24,6 +24,7 @@ window.onload = function () {
       .then((response) => response.json())
       .then((todos) => {
         console.log(todos);
+        todosDetailDiv.innerText = ""
         for (const todo of todos) {
           if (todo.userid == userList.value) {
             let cardDiv = document.createElement("div");
