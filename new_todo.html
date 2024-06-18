@@ -14,26 +14,30 @@
   <body>
     <main>
       <div class="container mt-5">
-        <button class="button">Todo</button>
+        <label for="selectUser">User</label>
+        <select name="user" id="selectUser"></select>
       </div>
+
       <div class="container mt-5">
-        <form>
-          <label for="userSelect">User</label>
-          <select name="user" id="userSelect">
-            <option value="aston">Ian Aston</option>
-            <option value="grace">Siddaile Grace</option>
-          </select>
-        </form>
+        <label for="selectCategory">Category</label>
+        <select name="category" id="selectCategory"></select>
       </div>
 
       <div class="container mt-5">
         <form>
           <label for="prioritySelect">Priority</label>
-          <select name="priority" id="prioritySelect">Select
-            
+          <select name="priority" id="prioritySelect">
+          
           </select>
         </form>
       </div>
-      <script src="new_todo.js"></script>
+
+      <!-- <div class="container mt-5">
+        <label for="selectDescription">Description</label>
+        <select name="description" id="selectDescription"></select>
+      </div> -->
+    </main>
+
+    <script src="new_todo.js"></script>
   </body>
 </html>
