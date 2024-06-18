@@ -55,18 +55,18 @@ window.onload = function () {
 
             cardBody.appendChild(deadline);
 
-            const doneButton = document.createElement("button");
-            doneButton.classList.add("btn-round", "btn", "btn-outline-success");
-            doneButton.innerText = "";
+            const doneButton = document.createElement("a");
+            doneButton.classList.add("btn-round", "btn", "btn-outline-success","doneButton");
+            doneButton.href = `done.html?todoid=${todo.id}`;
             const icon = document.createElement("i");
             icon.classList.add("bi", "bi-check", "big-icon");
 
             cardBody.appendChild(doneButton);
             doneButton.appendChild(icon);
 
-            const deleteButton = document.createElement("button");
+            const deleteButton = document.createElement("a");
             deleteButton.classList.add("btn-round", "btn", "btn-outline-danger", "mx-3");
-            deleteButton.innerText = "";
+            deleteButton.href = `delete.html?todoid=${todo.id}`;
             const iconX = document.createElement("i");
             iconX.classList.add("bi", "bi-x", "big-icon");
 
@@ -75,7 +75,7 @@ window.onload = function () {
 
             cardBody.appendChild(deleteButton);
 
-            const editButton = document.createElement("button");
+            const editButton = document.createElement("a");
             editButton.classList.add("btn-round", "btn", "btn-outline-warning");
             editButton.innerText = "";
             const iconPencil = document.createElement("i");
@@ -83,7 +83,9 @@ window.onload = function () {
             editButton.appendChild(iconPencil);
             cardBody.appendChild(editButton);
 
-            // <button class="btn btn-primary btn-round">+</button>
+
+
+
           }
         }
       });

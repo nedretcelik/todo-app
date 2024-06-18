@@ -2,8 +2,8 @@
 window.onload = function () {
   const selectCategory = document.querySelector("#selectCategory");
   const selectUser = document.querySelector("#selectUser");
-  const selectDescription = document.querySelector("#selectDescription");
-
+  const prioritySelect = document.querySelector("#prioritySelect");
+  
   function loadUser() {
     fetch("http://localhost:8083/api/users")
       .then((response) => response.json())
@@ -18,6 +18,7 @@ window.onload = function () {
         }
       });
   }
+
   function loadCategory() {
     fetch("http://localhost:8083/api/categories")
       .then((response) => response.json())
@@ -33,21 +34,21 @@ window.onload = function () {
       });
   }
 
-//   function loadDescription() {
-//     fetch("http://localhost:8083/api/description")
-//       .then((response) => response.json())
-//       .then((descriptions) => {
-//         for (const description of descriptions) {
-//           let descriptionOption = new Option("option");
+  function loadPriority() {
+    fetch("http://localhost:8083/api/todos")
+      .then((response) => response.json())
+      .then((todos) => {
+        for (const todo of todos) {
+          let priorityOption = new Option("option");
 
-//           descriptionOption.value = description.id;
-//           descriptionOption.innerText = description.name;
+          priorityOption.innerText = todo.priority;
 
-//           selectDescription.appendChild(descriptionOption);
-//         }
-//       });
-//   }
-//   loadDescription();
+          prioritySelect.appendChild(priorityOption);
+        }
+      });
+  }
+
   loadUser();
   loadCategory();
+  loadPriority();
 };
